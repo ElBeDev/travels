@@ -1,0 +1,136 @@
+.section {
+  background: var(--parchment);
+  padding: 7rem 4rem;
+}
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+.visual { position: relative; }
+.photo {
+  width: 100%;
+  height: 580px;
+  background: url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80') center/cover;
+  border-radius: 3px;
+  box-shadow: var(--shadow-lg);
+}
+.photoAccent {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  width: 160px;
+  height: 160px;
+  background: var(--terra);
+  border-radius: 2px;
+  z-index: -1;
+}
+.counterBox {
+  position: absolute;
+  top: 2rem;
+  left: -2rem;
+  background: var(--brown);
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+/* Ring chart card */
+.ringCard {
+  position: absolute;
+  bottom: 2rem;
+  right: -2rem;
+  background: var(--brown);
+  border-radius: 3px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-md);
+}
+.ringSvg { display: block; flex-shrink: 0; }
+.ringText {
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+.ringPct {
+  font-family: var(--ff-display);
+  font-size: 1.6rem; font-weight: 700; color: var(--sand); line-height: 1;
+}
+.ringLbl {
+  font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(217,201,168,0.45); white-space: nowrap;
+}
+.counterNum {
+  font-family: var(--ff-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--sand);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.counterLbl {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.content {}
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-bottom: 1.2rem;
+}
+.title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--brown);
+  margin-bottom: 3rem;
+}
+.title em { font-style: italic; font-weight: 400; color: var(--olive); }
+.features { display: flex; flex-direction: column; }
+.feature {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--gray-lt);
+}
+.feature:last-child { border-bottom: none; }
+.fNum {
+  font-family: var(--ff-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--terra);
+  padding-top: 0.15rem;
+}
+.fTitle {
+  font-family: var(--ff-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 0.4rem;
+}
+.fText {
+  font-size: 0.88rem;
+  color: var(--brown-lt);
+  line-height: 1.75;
+}
+@media (max-width: 1024px) {
+  .inner { grid-template-columns: 1fr; gap: 4rem; }
+  .visual { order: -1; }
+  .photo { height: 380px; }
+}
+@media (max-width: 768px) {
+  .section { padding: 5rem 1.5rem; }
+  .counterBox { left: 0; }
+}

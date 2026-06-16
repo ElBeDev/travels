@@ -1,0 +1,95 @@
+.section {
+  background: var(--brown);
+  padding: 7rem 4rem;
+}
+.inner { max-width: 1100px; margin: 0 auto; }
+.header { margin-bottom: 2.5rem; }
+.eyebrow {
+  font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--terra); margin-bottom: 1.2rem;
+}
+.title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700; line-height: 1.1; color: var(--sand); margin-bottom: 0.8rem;
+}
+.title em { font-style: italic; font-weight: 400; color: rgba(217,201,168,0.55); }
+.sub { font-size: 0.85rem; color: rgba(217,201,168,0.45); letter-spacing: 0.04em; }
+
+/* Legend */
+.legend {
+  display: flex; gap: 2rem; margin-bottom: 2.5rem;
+}
+.legendPublic, .legendOurs {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.legendPublic { color: rgba(217,201,168,0.35); }
+.legendPublic span {
+  display: block; width: 20px; height: 8px;
+  background: rgba(217,201,168,0.18); border-radius: 1px;
+}
+.legendOurs { color: var(--terra); }
+.legendOurs span {
+  display: block; width: 20px; height: 8px;
+  background: var(--terra); border-radius: 1px;
+}
+
+/* Chart */
+.chart { display: flex; flex-direction: column; gap: 0; }
+.row {
+  display: grid;
+  grid-template-columns: 220px 1fr 100px;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.row:last-child { border-bottom: none; }
+.rowLabel { display: flex; flex-direction: column; gap: 0.2rem; }
+.rowCity {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--sand); opacity: 0.6;
+}
+.rowHotel {
+  font-size: 0.82rem; color: rgba(217,201,168,0.45); line-height: 1.3;
+}
+.bars { display: flex; flex-direction: column; gap: 6px; }
+.barRow { display: flex; align-items: center; gap: 0.75rem; }
+.priceLabel {
+  font-size: 0.7rem; color: rgba(217,201,168,0.3); white-space: nowrap;
+  width: 58px; text-align: right; flex-shrink: 0;
+}
+.oursLabel { color: var(--terra) !important; opacity: 0.85; font-weight: 600; }
+.barTrack {
+  height: 20px; position: relative; flex: 1;
+}
+.barPublic {
+  height: 100%; min-width: 4px;
+  background: rgba(217,201,168,0.15);
+  border-radius: 1px;
+}
+.barOurs {
+  height: 100%; min-width: 4px;
+  background: var(--terra);
+  border-radius: 1px;
+  position: relative; display: flex; align-items: center;
+}
+.saveBadge {
+  position: absolute; right: 6px;
+  font-size: 0.6rem; font-weight: 700; color: rgba(255,255,255,0.7);
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.saveAmt {
+  font-size: 0.78rem; font-weight: 700; color: #7EC87E;
+  text-align: right; white-space: nowrap;
+}
+.note {
+  margin-top: 2rem; font-size: 0.72rem;
+  color: rgba(217,201,168,0.25); font-style: italic; line-height: 1.6;
+}
+@media (max-width: 1024px) {
+  .row { grid-template-columns: 1fr; gap: 0.5rem; }
+  .saveAmt { text-align: left; }
+}
+@media (max-width: 768px) { .section { padding: 5rem 1.5rem; } }
