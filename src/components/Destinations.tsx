@@ -40,7 +40,7 @@ export default function Destinations() {
         {DESTINATIONS.map((d, i) => (
           <motion.div
             key={d.tag}
-            className={`${styles.card} ${d.large ? styles.large : ''}`}
+            className={`${styles.card} ${'large' in d && d.large ? styles.large : ''}`}
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
