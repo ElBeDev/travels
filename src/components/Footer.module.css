@@ -23,7 +23,7 @@
 }
 .tagline {
   font-size: 0.85rem;
-  color: rgba(217,201,168,0.5);
+  color: rgba(244,228,193,0.5);
   line-height: 1.75;
 }
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -40,7 +40,7 @@
 .col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
 .link {
   font-size: 0.85rem;
-  color: rgba(217,201,168,0.55);
+  color: rgba(244,228,193,0.55);
   transition: color 0.15s;
 }
 .link:hover { color: var(--sand); }
@@ -51,7 +51,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.75rem;
-  color: rgba(217,201,168,0.3);
+  color: rgba(244,228,193,0.3);
 }
 .note { font-style: italic; }
 @media (max-width: 1024px) {

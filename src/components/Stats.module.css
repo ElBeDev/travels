@@ -2,7 +2,8 @@
   background: var(--olive);
   overflow: hidden;
   padding: 0;
-  border-top: none;
+  border-top: 1px solid rgba(238,226,115,0.15);
+  border-bottom: 1px solid rgba(238,226,115,0.15);
 }
 .track {
   display: flex;
@@ -26,7 +27,7 @@
   font-family: var(--ff-display);
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--terra);
   letter-spacing: -0.01em;
 }
 .lbl {

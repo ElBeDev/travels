@@ -9,10 +9,10 @@
   transition: background 0.4s, box-shadow 0.4s, padding 0.3s;
 }
 .scrolled {
-  background: rgba(247,240,227,0.96);
+  background: rgba(4,28,40,0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(44,26,14,0.1);
+  box-shadow: 0 1px 0 rgba(238,226,115,0.12);
   padding: 1rem 2.5rem;
 }
 .logo {
@@ -20,7 +20,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   font-style: italic;
-  color: var(--brown);
+  color: var(--sand);
   letter-spacing: -0.01em;
 }
 .nav:not(.scrolled) .logo { color: var(--white); }
@@ -38,7 +38,7 @@
   color: rgba(255,255,255,0.8);
   transition: color 0.2s;
 }
-.scrolled .links a { color: var(--brown-md); }
+.scrolled .links a { color: var(--sand); }
 .links a:hover { color: var(--terra); }
 .scrolled .links a:hover { color: var(--terra); }
 .cta { display: flex; align-items: center; gap: 1.2rem; }
@@ -52,7 +52,7 @@
 }
 .scrolled .login { color: var(--gray); }
 .login:hover { color: var(--white); }
-.scrolled .login:hover { color: var(--brown); }
+.scrolled .login:hover { color: var(--sand); }
 .btnPrimary {
   padding: 0.65rem 1.5rem;
   background: var(--terra);
@@ -98,7 +98,7 @@
 .mobileMenu a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--brown-md);
+  color: var(--sand);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }

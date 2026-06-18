@@ -9,9 +9,9 @@ const CIRC = 2 * Math.PI * R
 function RingSavings({ active }: { active: boolean }) {
   // 3 segments: hotels 48%, flights 38%, tours 52% → show as donut slices of avg
   const segments = [
-    { label: 'Hotels',  pct: 0.48, color: '#C4602A' },
-    { label: 'Flights', pct: 0.38, color: '#4A5E35' },
-    { label: 'Tours',   pct: 0.52, color: '#D9C9A8' },
+    { label: 'Hotels',  pct: 0.48, color: '#eee273' },
+    { label: 'Flights', pct: 0.38, color: '#d4af37' },
+    { label: 'Tours',   pct: 0.52, color: 'rgba(244,228,193,0.35)' },
   ]
   // Draw 3 arcs: each takes 1/3 of circle, filled proportionally by pct
   const sliceAngle = (2 * Math.PI) / 3

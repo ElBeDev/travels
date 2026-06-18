@@ -11,7 +11,7 @@
 .title {
   font-family: var(--ff-display);
   font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700; line-height: 1.1; color: var(--brown); margin-bottom: 1rem;
+  font-weight: 700; line-height: 1.1; color: var(--sand); margin-bottom: 1rem;
   text-align: center;
 }
 .title em { font-style: italic; font-weight: 400; color: var(--olive); }
@@ -59,13 +59,13 @@
 .featured .planBadge { color: var(--sand); opacity: 0.7; }
 .planName {
   font-family: var(--ff-display);
-  font-size: 1.4rem; font-weight: 600; color: var(--brown); margin-bottom: 0.4rem;
+  font-size: 1.4rem; font-weight: 600; color: var(--sand); margin-bottom: 0.4rem;
 }
 .featured .planName { color: var(--sand); }
 .planTagline {
   font-size: 0.83rem; color: var(--brown-lt); line-height: 1.55; margin-bottom: 1.8rem;
 }
-.featured .planTagline { color: rgba(217,201,168,0.6); }
+.featured .planTagline { color: rgba(244,228,193,0.6); }
 .priceBlock {
   padding-bottom: 1.8rem;
   margin-bottom: 1.8rem;
@@ -74,18 +74,18 @@
 .featured .priceBlock { border-color: rgba(255,255,255,0.1); }
 .amount {
   font-family: var(--ff-display);
-  font-size: 2.8rem; font-weight: 700; color: var(--brown); line-height: 1;
+  font-size: 2.8rem; font-weight: 700; color: var(--sand); line-height: 1;
   display: block;
 }
 .featured .amount { color: var(--sand); }
 .period { font-size: 0.78rem; color: var(--gray); }
-.featured .period { color: rgba(217,201,168,0.5); }
+.featured .period { color: rgba(244,228,193,0.5); }
 .features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
 .feature {
   display: flex; align-items: flex-start; gap: 0.6rem;
-  font-size: 0.85rem; color: var(--brown-md); line-height: 1.4;
+  font-size: 0.85rem; color: var(--sand); line-height: 1.4;
 }
-.featured .feature { color: rgba(217,201,168,0.7); }
+.featured .feature { color: rgba(244,228,193,0.7); }
 .check { color: var(--olive); flex-shrink: 0; font-size: 0.85rem; margin-top: 0.05rem; }
 .featured .check { color: var(--terra); }
 .btnPrimary, .btnSecondary {
@@ -99,7 +99,7 @@
 }
 .btnPrimary:hover { background: var(--terra-h); }
 .btnSecondary {
-  background: transparent; color: var(--brown-md);
+  background: transparent; color: var(--sand);
   border: 1.5px solid var(--gray-lt);
 }
 .btnSecondary:hover { border-color: var(--terra); color: var(--terra); }
@@ -107,6 +107,6 @@
   text-align: center; margin-top: 0.8rem;
   font-size: 0.7rem; color: var(--gray);
 }
-.featured .guarantee { color: rgba(217,201,168,0.35); }
+.featured .guarantee { color: rgba(244,228,193,0.35); }
 @media (max-width: 1024px) { .plans { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
 @media (max-width: 768px) { .section { padding: 5rem 1.5rem; } }

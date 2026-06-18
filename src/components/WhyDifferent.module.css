@@ -62,7 +62,7 @@
 }
 .ringLbl {
   font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(217,201,168,0.45); white-space: nowrap;
+  color: rgba(244,228,193,0.45); white-space: nowrap;
 }
 .counterNum {
   font-family: var(--ff-display);
@@ -93,7 +93,7 @@
   font-size: clamp(2.2rem, 3.5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.1;
-  color: var(--brown);
+  color: var(--sand);
   margin-bottom: 3rem;
 }
 .title em { font-style: italic; font-weight: 400; color: var(--olive); }
@@ -117,7 +117,7 @@
   font-family: var(--ff-display);
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--brown);
+  color: var(--sand);
   margin-bottom: 0.4rem;
 }
 .fText {
