@@ -62,10 +62,12 @@
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  /* Make logos appear as gold/white on dark bg */
-  filter: brightness(0) invert(1);
-  opacity: 1;
+  /* invert dark-on-light logos → light-on-dark, then screen removes the black bg */
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: 0.7;
 }
 .logo:hover img {
-  filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(400%) hue-rotate(5deg);
+  filter: invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(1.1);
+  opacity: 1;
 }
