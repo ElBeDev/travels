@@ -2,6 +2,18 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './HotelBrands.module.css'
 
+const AIRLINES = [
+  { name: 'American Airlines', file: '/brands/american-airlines.svg' },
+  { name: 'Delta',            file: '/brands/delta.svg' },
+  { name: 'United',           file: '/brands/united.svg' },
+  { name: 'Emirates',         file: '/brands/emirates.svg' },
+  { name: 'Lufthansa',        file: '/brands/lufthansa.svg' },
+  { name: 'Southwest',        file: '/brands/southwest.svg' },
+  { name: 'Air France',       file: '/brands/air-france.svg' },
+  { name: 'British Airways',  file: '/brands/british-airways.svg' },
+]
+const AIRLINE_TICKER = [...AIRLINES, ...AIRLINES, ...AIRLINES]
+
 const BRANDS = [
   { name: 'JW Marriott',       file: '/brands/jw-marriott.png' },
   { name: 'Hilton',            file: '/brands/hilton.png' },
@@ -31,7 +43,7 @@ export default function HotelBrands() {
         transition={{ duration: 0.6 }}
       >
         <p className={styles.eyebrow}>Exclusive member rates at</p>
-        <h2 className={styles.title}>Leading Hotels Worldwide</h2>
+        <h2 className={styles.title}>Top Hotels & Airlines Worldwide</h2>
       </motion.div>
 
       <motion.div
@@ -44,6 +56,21 @@ export default function HotelBrands() {
           {TICKER.map((b, i) => (
             <div key={`${b.name}-${i}`} className={styles.logo}>
               <img src={b.file} alt={b.name} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.div
+        className={`${styles.marqueeWrap} ${styles.marqueeReverse}`}
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.6, delay: 0.35 }}
+      >
+        <div className={`${styles.track} ${styles.trackReverse}`}>
+          {AIRLINE_TICKER.map((a, i) => (
+            <div key={`${a.name}-${i}`} className={`${styles.logo} ${styles.logoAirline}`}>
+              <img src={a.file} alt={a.name} loading="lazy" />
             </div>
           ))}
         </div>

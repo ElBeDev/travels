@@ -63,3 +63,18 @@
   mix-blend-mode: screen;
   opacity: 1
 }
+
+/* Airlines row */
+.marqueeReverse { margin-top: 1rem; }
+.trackReverse {
+  animation: scrollReverse 35s linear infinite;
+}
+.trackReverse:hover { animation-play-state: paused; }
+@keyframes scrollReverse {
+  from { transform: translateX(-33.333%); }
+  to   { transform: translateX(0); }
+}
+.logoAirline img {
+  height: 52px;
+  max-width: 180px;
+}
