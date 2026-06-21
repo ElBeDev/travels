@@ -15,7 +15,7 @@ export default function Guarantee() {
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.6, type: 'spring', stiffness: 200 }}
         >
-          <img src="/best-price-stamp.png" alt="Best Price Guarantee" className={styles.stampImg} />
+          <img src="/pngegg.png" alt="Best Price Guarantee" className={styles.stampImg} />
         </motion.div>
         <motion.div
           className={styles.text}
