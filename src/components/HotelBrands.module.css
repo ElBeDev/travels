@@ -55,11 +55,11 @@
   flex-shrink: 0;
 }
 .logo img {
-  height: 36px;
+  height: 78px;
   width: auto;
-  max-width: 140px;
+  max-width: 260px;
   object-fit: contain;
   filter: invert(1);
   mix-blend-mode: screen;
-  opacity: 0.85;
+  opacity: 1
 }
