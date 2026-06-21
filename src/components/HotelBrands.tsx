@@ -73,7 +73,7 @@ export default function HotelBrands() {
         <div className={`${styles.track} ${styles.trackReverse}`}>
           {AIRLINE_TICKER.map((a, i) => (
             <div key={`${a.name}-${i}`} className={`${styles.logo} ${styles.logoAirline}`}>
-              <img src={a.file} alt={a.name} loading="lazy" />
+              <img src={a.file} alt={a.name} loading="lazy" style={a.name === 'Delta' ? { width: 60, height: 60 } : undefined} />
               <span>{a.name}</span>
             </div>
           ))}
