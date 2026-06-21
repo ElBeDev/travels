@@ -4,14 +4,17 @@ import styles from './HotelBrands.module.css'
 
 const AIRLINES = [
   { name: 'American Airlines', file: '/brands/american-airlines.svg' },
-  { name: 'Delta',            file: '/brands/delta.svg' },
-  { name: 'United',           file: '/brands/united.svg' },
-  { name: 'Emirates',         file: '/brands/emirates.svg' },
-  { name: 'Lufthansa',        file: '/brands/lufthansa.svg' },
-  { name: 'Southwest',        file: '/brands/southwest.svg' },
-  { name: 'Air France',       file: '/brands/air-france.svg' },
-  { name: 'British Airways',  file: '/brands/british-airways.svg' },
+  { name: 'Delta',             file: '/brands/delta.svg' },
+  { name: 'United Airlines',   file: '/brands/united.svg' },
+  { name: 'Emirates',          file: '/brands/emirates-icon.svg' },
+  { name: 'Lufthansa',         file: '/brands/lufthansa.svg' },
+  { name: 'Southwest',         file: '/brands/southwest.svg' },
+  { name: 'Air France',        file: '/brands/air-france.svg' },
+  { name: 'British Airways',   file: '/brands/british-airways.svg' },
+  { name: 'Aeromexico',        file: '/brands/aeromexico.svg' },
+  { name: 'KLM',               file: '/brands/klm.svg' },
 ]
+
 const AIRLINE_TICKER = [...AIRLINES, ...AIRLINES, ...AIRLINES]
 
 const BRANDS = [
@@ -71,6 +74,7 @@ export default function HotelBrands() {
           {AIRLINE_TICKER.map((a, i) => (
             <div key={`${a.name}-${i}`} className={`${styles.logo} ${styles.logoAirline}`}>
               <img src={a.file} alt={a.name} loading="lazy" />
+              <span>{a.name}</span>
             </div>
           ))}
         </div>
