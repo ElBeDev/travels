@@ -128,7 +128,7 @@ export const PLANS = [
     ],
   },
   {
-    badge: '★ Limited · 500 spots',
+    badge: '★ Limited Time',
     name: 'Founding Member',
     tagline: 'Lock in our lowest rate — forever. Reserved for the first 500 members.',
     amount: '$149',

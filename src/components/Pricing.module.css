@@ -44,9 +44,10 @@
   transform: translateX(-50%);
   background: var(--terra);
   color: #041c28;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0.25rem 0.9rem;
   border-radius: 20px;
