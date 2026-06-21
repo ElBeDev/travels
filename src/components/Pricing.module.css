@@ -43,7 +43,7 @@
   left: 50%;
   transform: translateX(-50%);
   background: var(--terra);
-  color: #fff;
+  color: #041c28;
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -95,7 +95,7 @@
   border-radius: 2px; transition: background 0.2s, border-color 0.2s;
 }
 .btnPrimary {
-  background: var(--terra); color: #fff;
+  background: var(--terra); color: #041c28;
 }
 .btnPrimary:hover { background: var(--terra-h); }
 .btnSecondary {
