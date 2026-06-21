@@ -29,7 +29,6 @@ function App() {
       <Footer />
     </LangProvider>
   )
-  )
 }
 
 export default App

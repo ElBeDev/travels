@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { DEALS } from '../data/content'
 import { useLang } from '../i18n'
 import styles from './Deals.module.css'
 

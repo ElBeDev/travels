@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState } from 'react'
+import type { ReactNode } from 'react'
 
 export type Lang = 'en' | 'es'
 
@@ -94,20 +95,18 @@ const T = {
     pricing_cta_founding: 'Join as Founder',
     pricing_cta_plus:     'Upgrade to Plus',
     plans: [
-      {
-        badge: 'Annual', name: 'Annual',
+      { badge: 'Annual', name: 'Annual', featured: false,
         tagline: 'For travelers who want to make the most of every trip.',
         amount: '$199', period: '/year · auto-renewal',
         features: ['Full access to the member portal','Exclusive rates on 4★ and 5★ hotels, flights, transfers, and tours','Multi-destination booking in a single checkout','Ready-made itineraries','Save and share your travel plans','Standard support (chat, email)','30-day money-back guarantee'],
       },
-      {
-        badge: '★ Limited Time', name: 'Founding Member',
+      { badge: '★ Limited Time', name: 'Founding Member', featured: true,
         tagline: 'Lock in our lowest rate — forever. Reserved for the first 500 members.',
         amount: '$149', period: '/year · locked in forever',
         features: ['Everything in Annual','Locked-in founding rate ($149/year forever)','Founding Member badge in your profile','30-day money-back guarantee'],
       },
       {
-        badge: 'Annual Plus', name: 'Annual Plus',
+        badge: 'Annual Plus', name: 'Annual Plus', featured: false,
         tagline: 'For frequent travelers who want priority service and the best rates.',
         amount: '$399', period: '/year · auto-renewal',
         features: ['Everything in Annual','Priority Call Center support','Extended best-price guarantee','Early access to new deals','30-day money-back guarantee'],
@@ -232,19 +231,19 @@ const T = {
     pricing_cta_plus:     'Mejorar a Plus',
     plans: [
       {
-        badge: 'Anual', name: 'Anual',
+        badge: 'Anual', name: 'Anual', featured: false,
         tagline: 'Para viajeros que quieren aprovechar al máximo cada viaje.',
         amount: '$199', period: '/año · renovación automática',
         features: ['Acceso completo al portal de miembros','Tarifas exclusivas en hoteles 4★ y 5★, vuelos, traslados y tours','Reservas multi-destino en un solo checkout','Itinerarios listos para usar','Guarda y comparte tus planes de viaje','Soporte estándar (chat, correo)','Garantía de devolución de 30 días'],
       },
       {
-        badge: '★ Tiempo Limitado', name: 'Miembro Fundador',
+        badge: '★ Tiempo Limitado', name: 'Miembro Fundador', featured: true,
         tagline: 'Asegura nuestra tarifa más baja — para siempre. Reservado para los primeros 500 miembros.',
         amount: '$149', period: '/año · precio fijo para siempre',
         features: ['Todo lo del plan Anual','Tarifa fundadora fija ($149/año para siempre)','Insignia de Miembro Fundador en tu perfil','Garantía de devolución de 30 días'],
       },
       {
-        badge: 'Anual Plus', name: 'Anual Plus',
+        badge: 'Anual Plus', name: 'Anual Plus', featured: false,
         tagline: 'Para viajeros frecuentes que quieren servicio prioritario y las mejores tarifas.',
         amount: '$399', period: '/año · renovación automática',
         features: ['Todo lo del plan Anual','Soporte prioritario por teléfono','Garantía de mejor precio extendida','Acceso anticipado a nuevas ofertas','Garantía de devolución de 30 días'],
