@@ -14,7 +14,7 @@
   font-weight: 700; line-height: 1.1; color: var(--sand); margin-bottom: 1rem;
   text-align: center;
 }
-.title em { font-style: italic; font-weight: 400; color: var(--olive); }
+.title em { font-style: italic; font-weight: 400; color: var(--terra); }
 .sub {
   font-size: 0.92rem; color: var(--brown-lt); line-height: 1.7;
   text-align: center; max-width: 540px; margin: 0 auto 4rem;
@@ -86,7 +86,7 @@
   font-size: 0.85rem; color: var(--sand); line-height: 1.4;
 }
 .featured .feature { color: rgba(244,228,193,0.7); }
-.check { color: var(--olive); flex-shrink: 0; font-size: 0.85rem; margin-top: 0.05rem; }
+.check { color: var(--terra); flex-shrink: 0; font-size: 0.85rem; margin-top: 0.05rem; }
 .featured .check { color: var(--terra); }
 .btnPrimary, .btnSecondary {
   display: flex; align-items: center; justify-content: center;

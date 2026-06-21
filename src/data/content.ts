@@ -17,21 +17,27 @@ export const STATS = [
 export const STEPS = [
   {
     num: '01',
-    icon: 'member',
+    icon: 'handshake',
     title: 'Become a Member',
-    text: 'Activate your annual membership and unlock exclusive rates on every trip — backed by our 30-day money-back guarantee.',
+    text: 'Activate your annual membership and instantly unlock exclusive rates on every trip — backed by our 30-day money-back guarantee.',
   },
   {
     num: '02',
-    icon: 'search',
-    title: 'Log In & Search',
-    text: 'Access your private portal and search hotels, flights, transfers, and tours at exclusive member rates — worldwide, in real time.',
+    icon: 'ai',
+    title: 'Plan with AI',
+    text: 'Our AI assistant builds your ideal itinerary in seconds — just tell it where you want to go, your dates, and your style.',
   },
   {
     num: '03',
-    icon: 'book',
+    icon: 'search',
+    title: 'Compare & Choose',
+    text: 'Browse your personalized results and compare member rates vs. public prices in real time — hotels, flights, transfers, and tours.',
+  },
+  {
+    num: '04',
+    icon: 'check',
     title: 'Book & Save',
-    text: 'Pick your trip, book directly, and save an average of 30% compared to public prices. Every single trip.',
+    text: 'Pick your trip, book directly, and save an average of 30% vs. public prices. Every single trip.',
   },
 ] as const
 

@@ -13,7 +13,7 @@
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 700; line-height: 1.1; color: var(--sand); margin-bottom: 0.8rem;
 }
-.title em { font-style: italic; font-weight: 400; color: var(--olive); }
+.title em { font-style: italic; font-weight: 400; color: var(--terra); }
 .sub { font-size: 0.95rem; color: var(--brown-lt); line-height: 1.7; }
 .cards {
   display: grid;
