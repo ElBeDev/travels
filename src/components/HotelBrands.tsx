@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useLang } from '../i18n'
 import styles from './HotelBrands.module.css'
 
 const AIRLINES = [
@@ -36,6 +37,7 @@ const TICKER = [...BRANDS, ...BRANDS, ...BRANDS]
 export default function HotelBrands() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.2 })
+  const { t } = useLang()
 
   return (
     <section className={styles.section} ref={ref}>
@@ -45,8 +47,8 @@ export default function HotelBrands() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <p className={styles.eyebrow}>Exclusive member rates at</p>
-        <h2 className={styles.title}>Top Hotels & Airlines Worldwide</h2>
+        <p className={styles.eyebrow}>{t.brands_eyebrow}</p>
+        <h2 className={styles.title}>{t.brands_title}</h2>
       </motion.div>
 
       <motion.div

@@ -1,12 +1,13 @@
 import { useRef, useState } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { DEALS } from '../data/content'
+import { useLang } from '../i18n'
 import styles from './Deals.module.css'
 
 export default function Deals() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.05 })
   const [active, setActive] = useState<number | null>(null)
+  const { t } = useLang()
 
   return (
     <section id="deals" className={styles.section} ref={ref}>
@@ -15,12 +16,12 @@ export default function Deals() {
           <motion.p className={styles.eyebrow}
             initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5 }}>
-            Members-only deals
+            {t.deals_eyebrow}
           </motion.p>
           <motion.h2 className={styles.title}
             initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}>
-            Real rates.<br /><em>Right now.</em>
+            {t.deals_title_a}<br /><em>{t.deals_title_b}</em>
           </motion.h2>
           <motion.p className={styles.sub}
             initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}

@@ -1,3 +1,4 @@
+import { LangProvider } from './i18n'
 import Navbar       from './components/Navbar'
 import Hero         from './components/Hero'
 import Stats        from './components/Stats'
@@ -13,7 +14,7 @@ import Footer       from './components/Footer'
 
 function App() {
   return (
-    <>
+    <LangProvider>
       <Navbar />
       <Hero />
       <Stats />
@@ -26,7 +27,8 @@ function App() {
       <Pricing />
       <Guarantee />
       <Footer />
-    </>
+    </LangProvider>
+  )
   )
 }
 

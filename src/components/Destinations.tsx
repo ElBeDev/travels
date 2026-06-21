@@ -1,11 +1,19 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { DESTINATIONS } from '../data/content'
+import { useLang } from '../i18n'
 import styles from './Destinations.module.css'
+
+const DEST_IMAGES = [
+  'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=900&q=80',
+  'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+  'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+]
 
 export default function Destinations() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.05 })
+  const { t } = useLang()
 
   return (
     <section id="destinations" className={styles.section} ref={ref}>
@@ -16,7 +24,7 @@ export default function Destinations() {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Destinations & Experiences
+          {t.dest_eyebrow}
         </motion.p>
         <motion.h2
           className={styles.title}
@@ -24,7 +32,7 @@ export default function Destinations() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          Whatever your<br /><em>travel style</em>
+          {t.dest_title_a}<br /><em>{t.dest_title_b}</em>
         </motion.h2>
         <motion.p
           className={styles.desc}
@@ -37,17 +45,17 @@ export default function Destinations() {
       </div>
 
       <div className={styles.grid}>
-        {DESTINATIONS.map((d, i) => (
+        {t.destinations.map((d, i) => (
           <motion.div
             key={d.tag}
-            className={`${styles.card} ${'large' in d && d.large ? styles.large : ''}`}
+            className={`${styles.card} ${i === 0 ? styles.large : ''}`}
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div
               className={styles.cardBg}
-              style={{ backgroundImage: `url('${d.image}')` }}
+              style={{ backgroundImage: `url('${DEST_IMAGES[i]}')` }}
             />
             <div className={styles.cardContent}>
               <span className={styles.cardTag}>{d.tag}</span>

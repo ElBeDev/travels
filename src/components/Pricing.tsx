@@ -1,11 +1,13 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { PLANS } from '../data/content'
+import { useLang } from '../i18n'
 import styles from './Pricing.module.css'
 
 export default function Pricing() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.05 })
+  const { t } = useLang()
+  const CTAS = [t.pricing_cta_annual, t.pricing_cta_founding, t.pricing_cta_plus]
 
   return (
     <section id="pricing" className={styles.section} ref={ref}>
@@ -13,12 +15,12 @@ export default function Pricing() {
         <motion.p className={styles.eyebrow}
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}>
-          Choose your plan
+          {t.pricing_eyebrow}
         </motion.p>
         <motion.h2 className={styles.title}
           initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}>
-          Browse free.<br /><em>Book when you're ready.</em>
+          {t.pricing_title_a}<br /><em>{t.pricing_title_b}</em>
         </motion.h2>
         <motion.p className={styles.sub}
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
@@ -27,7 +29,7 @@ export default function Pricing() {
         </motion.p>
 
         <div className={styles.plans}>
-          {PLANS.map((plan, i) => (
+          {t.plans.map((plan, i) => (
             <motion.div
               key={plan.name}
               className={`${styles.plan} ${plan.featured ? styles.featured : ''}`}
@@ -53,11 +55,11 @@ export default function Pricing() {
                 ))}
               </ul>
               <motion.a
-                href={plan.href}
+                href="#"
                 className={plan.featured ? styles.btnPrimary : styles.btnSecondary}
                 whileTap={{ scale: 0.97 }}
               >
-                {plan.cta}
+                {CTAS[i]}
               </motion.a>
               <p className={styles.guarantee}>30-day money-back guarantee</p>
             </motion.div>

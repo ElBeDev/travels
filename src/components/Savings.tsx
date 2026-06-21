@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useLang } from '../i18n'
 import styles from './Savings.module.css'
 
 const BAR_DATA = [
@@ -18,6 +19,7 @@ const fmt = (n: number) =>
 export default function Savings() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.08 })
+  const { t } = useLang()
 
   return (
     <section id="savings" className={styles.section} ref={ref}>
@@ -26,12 +28,12 @@ export default function Savings() {
           <motion.p className={styles.eyebrow}
             initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5 }}>
-            The numbers
+            {t.savings_eyebrow}
           </motion.p>
           <motion.h2 className={styles.title}
             initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}>
-            Bigger trip,<br /><em>bigger savings.</em>
+            {t.savings_title_a}<br /><em>{t.savings_title_b}</em>
           </motion.h2>
           <motion.p className={styles.sub}
             initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
@@ -44,8 +46,8 @@ export default function Savings() {
         <motion.div className={styles.legend}
           initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}>
-          <span className={styles.legendPublic}><span />Public price</span>
-          <span className={styles.legendOurs}><span />Member rate</span>
+          <span className={styles.legendPublic}><span />{t.savings_public}</span>
+          <span className={styles.legendOurs}><span />{t.savings_member}</span>
         </motion.div>
 
         {/* Bar chart */}

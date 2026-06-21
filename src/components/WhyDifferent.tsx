@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { WHY_FEATURES } from '../data/content'
+import { useLang } from '../i18n'
 import styles from './WhyDifferent.module.css'
 
 const R = 52
@@ -51,6 +51,7 @@ function RingSavings({ active }: { active: boolean }) {
 export default function WhyDifferent() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.05 })
+  const { t } = useLang()
 
   return (
     <section id="why" className={styles.section} ref={ref}>
@@ -68,7 +69,7 @@ export default function WhyDifferent() {
           {/* Floating counter */}
           <div className={styles.counterBox}>
             <span className={styles.counterNum}>500K+</span>
-            <span className={styles.counterLbl}>Properties worldwide</span>
+            <span className={styles.counterLbl}>{t.why_counter_label}</span>
           </div>
 
           {/* Ring chart card */}
@@ -94,7 +95,7 @@ export default function WhyDifferent() {
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5 }}
           >
-            Why Travels is different
+            {t.why_eyebrow}
           </motion.p>
           <motion.h2
             className={styles.title}
@@ -102,11 +103,11 @@ export default function WhyDifferent() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            Built for<br /><em>serious travelers</em>
+            {t.why_title_a}<br /><em>{t.why_title_b}</em>
           </motion.h2>
 
           <div className={styles.features}>
-            {WHY_FEATURES.map((f, i) => (
+            {t.why_features.map((f, i) => (
               <motion.div
                 key={f.num}
                 className={styles.feature}

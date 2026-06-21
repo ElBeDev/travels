@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { STEPS } from '../data/content'
+import { useLang } from '../i18n'
 import styles from './HowItWorks.module.css'
 
 function StepIcon({ icon }: { icon: string }) {
@@ -37,6 +37,7 @@ function StepIcon({ icon }: { icon: string }) {
 export default function HowItWorks() {
   const ref = useRef<HTMLElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.1 })
+  const { t } = useLang()
 
   return (
     <section id="how" className={styles.section} ref={ref}>
@@ -47,7 +48,7 @@ export default function HowItWorks() {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
         >
-          How it works
+          {t.how_eyebrow}
         </motion.p>
         <motion.h2
           className={styles.title}
@@ -55,8 +56,8 @@ export default function HowItWorks() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          Four steps to<br />
-          <em>exclusive rates</em>
+          {t.how_title_a}<br />
+          <em>{t.how_title_b}</em>
         </motion.h2>
         <motion.p
           className={styles.desc}
@@ -70,7 +71,7 @@ export default function HowItWorks() {
       </div>
 
       <div className={styles.steps}>
-        {STEPS.map((step, i) => (
+        {t.steps.map((step, i) => (
           <motion.div
             key={step.num}
             className={styles.step}
