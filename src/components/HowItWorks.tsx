@@ -12,17 +12,10 @@ function StepIcon({ icon }: { icon: string }) {
     </svg>
   )
   if (icon === 'ai') return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="11" cy="11" r="7" />
-      <path d="M21 21l-4.35-4.35" />
-      <path d="M11 8v3l2 2" />
-      <path d="M8 6.5l1 1" />
-      <path d="M6.5 8l1 1" />
-      <path d="M6 11h1" />
-      <path d="M8 13.5l1-1" />
-      <circle cx="18.5" cy="4.5" r="1" fill="currentColor" stroke="none" />
-      <circle cx="21" cy="7" r="0.8" fill="currentColor" stroke="none" />
-      <circle cx="17" cy="2.5" r="0.8" fill="currentColor" stroke="none" />
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+      <path d="M12 20v2m0-20v2m5 16v2m0-20v2M2 12h2m-2 5h2M2 7h2m16 5h2m-2 5h2M20 7h2M7 20v2M7 2v2" />
+      <rect width="16" height="16" x="4" y="4" rx="2" />
+      <rect width="8" height="8" x="8" y="8" rx="1" />
     </svg>
   )
   if (icon === 'search') return (
