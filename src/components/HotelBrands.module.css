@@ -53,21 +53,13 @@
   padding: 1rem 3rem;
   border-right: 1px solid rgba(238,226,115,0.08);
   flex-shrink: 0;
-  transition: opacity 0.2s;
 }
-.logo:hover { opacity: 1 !important; }
-.track:not(:hover) .logo { opacity: 0.45; }
 .logo img {
   height: 36px;
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  /* invert dark-on-light logos → light-on-dark, then screen removes the black bg */
   filter: invert(1);
   mix-blend-mode: screen;
-  opacity: 0.7;
-}
-.logo:hover img {
-  filter: invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(1.1);
-  opacity: 1;
+  opacity: 0.85;
 }
