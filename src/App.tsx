@@ -1,6 +1,7 @@
 import Navbar       from './components/Navbar'
 import Hero         from './components/Hero'
 import Stats        from './components/Stats'
+import HotelBrands  from './components/HotelBrands'
 import HowItWorks   from './components/HowItWorks'
 import Destinations from './components/Destinations'
 import WhyDifferent from './components/WhyDifferent'
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Hero />
       <Stats />
+      <HotelBrands />
       <HowItWorks />
       <Destinations />
       <WhyDifferent />
