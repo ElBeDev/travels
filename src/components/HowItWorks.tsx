@@ -5,13 +5,10 @@ import styles from './HowItWorks.module.css'
 
 function StepIcon({ icon }: { icon: string }) {
   if (icon === 'handshake') return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20 7H13.5L11 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2" />
-      <path d="M17 21h2a2 2 0 0 0 2-2v-4" />
-      <path d="M14 13l-2-2-3 3 2 2" />
-      <path d="M10 14l1.5 1.5" />
-      <path d="M17 9l-4 4" />
-      <path d="M14 7l3 3 3-3-3-3-3 3Z" />
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+      <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+      <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+      <path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8" />
     </svg>
   )
   if (icon === 'ai') return (
